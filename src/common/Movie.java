@@ -10,6 +10,8 @@ import org.apache.commons.lang3.builder.CompareToBuilder;
  * 
  */
 public class Movie  {
+    
+    private int movieId;
     private String title;
     private String director;
 
