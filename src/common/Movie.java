@@ -17,6 +17,36 @@ public class Movie  {
 
     public Movie() {
     }
+
+    @Override
+    public String toString() {
+        return "The movie " + title + " is directed by " + director + ".";
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + this.movieId;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Movie other = (Movie) obj;
+        if (this.movieId != other.movieId) {
+            return false;
+        }
+        return true;
+    }
     
     public String getTitle() {
         return title;
