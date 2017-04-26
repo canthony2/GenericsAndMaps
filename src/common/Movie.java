@@ -48,12 +48,27 @@ public class Movie  {
         return true;
     }
     
+    public int getMovieId() {
+        return movieId;
+    }
+    
+    public void setMovieId(int movieId) {
+        if(movieId < 1) {
+            throw new IllegalArgumentException("No Movie ID found: Please enter a valid ID");
+        }
+        this.movieId = movieId;
+    }
+    
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        if(title == null || title.isEmpty()) {
+            throw new IllegalArgumentException("No title found: Please enter a valid movie title");
+        } else {
+            this.title = title;
+        }
     }
 
     public String getDirector() {
@@ -61,15 +76,11 @@ public class Movie  {
     }
 
     public void setDirector(String director) {
-        this.director = director;
-    }
-    
-    public int getMovieId() {
-        return movieId;
-    }
-    
-    public void setMovieId(int movieId) {
-        this.movieId = movieId;
+        if(director == null || director.isEmpty()) {
+            throw new IllegalArgumentException("No director found: Please enter a valid director name");
+        } else {
+            this.director = director;
+        }
     }
     
 }
