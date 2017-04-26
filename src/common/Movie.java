@@ -58,7 +58,7 @@ public class Movie  {
         return movieId;
     }
     
-    public void setMovieId(int movieId) {
+    public void setMovieId(int movieId) throws IllegalArgumentException {
         if(movieId < 1) {
             throw new IllegalArgumentException("No Movie ID found: Please enter a valid ID");
         }
@@ -69,7 +69,7 @@ public class Movie  {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String title) throws IllegalArgumentException {
         if(title == null || title.isEmpty()) {
             throw new IllegalArgumentException("No title found: Please enter a valid movie title");
         } else {
@@ -81,7 +81,7 @@ public class Movie  {
         return director;
     }
 
-    public void setDirector(String director) {
+    public void setDirector(String director) throws IllegalArgumentException {
         if(director == null || director.isEmpty()) {
             throw new IllegalArgumentException("No director found: Please enter a valid director name");
         } else {
