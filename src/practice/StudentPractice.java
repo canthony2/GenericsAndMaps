@@ -26,16 +26,16 @@ public class StudentPractice {
         
         //create map to hold movies
         Map movieMap = new HashMap();
-        movieMap.put("2", m1);
-        movieMap.put("4", m2);
-        movieMap.put("1", m3);
-        movieMap.put("3", m4);
-        movieMap.put("10", m5);
-        movieMap.put("5", m6);
-        movieMap.put("9", m7);
-        movieMap.put("6", m8);
-        movieMap.put("8", m9);
-        movieMap.put("7", m10);
+        movieMap.put(m1.getMovieId(), m1);
+        movieMap.put(m2.getMovieId(), m2);
+        movieMap.put(m3.getMovieId(), m3);
+        movieMap.put(m4.getMovieId(), m4);
+        movieMap.put(m5.getMovieId(), m5);
+        movieMap.put(m6.getMovieId(), m6);
+        movieMap.put(m7.getMovieId(), m7);
+        movieMap.put(m8.getMovieId(), m8);
+        movieMap.put(m9.getMovieId(), m9);
+        movieMap.put(m10.getMovieId(), m10);
         
         Movie m = (Movie)movieMap.get("9");
         System.out.println(m);
