@@ -12,14 +12,14 @@ import org.apache.commons.lang3.builder.CompareToBuilder;
  */
 public class Movie  {
     
-    private int movieId;
+    private String movieId;
     private String title;
     private String director;
 
     public Movie() {
     }
     
-    public Movie(int movieId, String title, String director) {
+    public Movie(String movieId, String title, String director) {
         this.movieId = movieId;
         this.title = title;
         this.director = director;
@@ -33,9 +33,7 @@ public class Movie  {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 47 * hash + this.movieId;
-        hash = 47 * hash + Objects.hashCode(this.title);
-        hash = 47 * hash + Objects.hashCode(this.director);
+        hash = 89 * hash + Objects.hashCode(this.movieId);
         return hash;
     }
 
@@ -51,27 +49,22 @@ public class Movie  {
             return false;
         }
         final Movie other = (Movie) obj;
-        if (this.movieId != other.movieId) {
-            return false;
-        }
-        if (!Objects.equals(this.title, other.title)) {
-            return false;
-        }
-        if (!Objects.equals(this.director, other.director)) {
+        if (!Objects.equals(this.movieId, other.movieId)) {
             return false;
         }
         return true;
     }
-    
-    public int getMovieId() {
+
+    public String getMovieId() {
         return movieId;
     }
     
-    public void setMovieId(int movieId) throws IllegalArgumentException {
-        if(movieId < 1) {
+    public void setMovieId(String movieId) throws IllegalArgumentException {
+        if(movieId == null || movieId.isEmpty()) {
             throw new IllegalArgumentException("No Movie ID found: Please enter a valid ID");
+        } else {
+            this.movieId = movieId;
         }
-        this.movieId = movieId;
     }
     
     public String getTitle() {
