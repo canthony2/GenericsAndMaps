@@ -89,4 +89,14 @@ public class Movie  {
         }
     }
     
+    public int compareTo(Object other) {
+        
+        Movie o = (Movie)other;
+        
+        // Using a utility from Apache Commons
+        return new CompareToBuilder()
+               .append(this.movieId, o.movieId)
+               .toComparison();
+    }
+    
 }
