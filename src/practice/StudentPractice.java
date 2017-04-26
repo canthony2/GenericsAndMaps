@@ -3,6 +3,7 @@ package practice;
 import common.Movie;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  *
@@ -38,6 +39,13 @@ public class StudentPractice {
         
         Movie m = (Movie)movieMap.get("9");
         System.out.println("The movie information with the ID of: 9 is " + m);
+        
+        System.out.println("\nUsing a keyset, get the movies...");
+        Set keys = movieMap.keySet();
+        for(Object key : keys) {
+            Movie found = (Movie)movieMap.get(key);
+            System.out.println(found.toString());
+        }
         
     }
 }
