@@ -17,6 +17,12 @@ public class Movie  {
 
     public Movie() {
     }
+    
+    public Movie(int movieId, String title, String director) {
+        this.movieId = movieId;
+        this.title = title;
+        this.director = director;
+    }
 
     @Override
     public String toString() {
