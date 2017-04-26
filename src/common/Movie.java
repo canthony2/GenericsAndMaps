@@ -1,5 +1,6 @@
 package common;
 
+import java.util.Objects;
 import org.apache.commons.lang3.builder.CompareToBuilder;
 
 /**
@@ -32,7 +33,9 @@ public class Movie  {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 89 * hash + this.movieId;
+        hash = 47 * hash + this.movieId;
+        hash = 47 * hash + Objects.hashCode(this.title);
+        hash = 47 * hash + Objects.hashCode(this.director);
         return hash;
     }
 
@@ -49,6 +52,12 @@ public class Movie  {
         }
         final Movie other = (Movie) obj;
         if (this.movieId != other.movieId) {
+            return false;
+        }
+        if (!Objects.equals(this.title, other.title)) {
+            return false;
+        }
+        if (!Objects.equals(this.director, other.director)) {
             return false;
         }
         return true;
