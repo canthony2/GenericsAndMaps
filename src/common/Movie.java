@@ -27,7 +27,7 @@ public class Movie  {
 
     @Override
     public String toString() {
-        return title + " directed by " + director + ".";
+        return "The movie " + title + " is directed by " + director + ".";
     }
 
     @Override
