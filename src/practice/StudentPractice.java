@@ -1,6 +1,8 @@
 package practice;
 
 import common.Movie;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -20,6 +22,10 @@ public class StudentPractice {
         Movie m8 = new Movie("6", "Spaceballs", "Mel Brooks");
         Movie m9 = new Movie("8", "Down Periscope", "David S. Ward");
         Movie m10 = new Movie("7", "WarGames", "John Badham");
+        
+        //create map to hold movies
+        Map movieMap = new HashMap();
+        
         
     }
 }
