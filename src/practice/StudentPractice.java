@@ -38,7 +38,7 @@ public class StudentPractice {
         movieMap.put("7", m10);
         
         Movie m = (Movie)movieMap.get("9");
-        System.out.println("The movie information with the ID of: 9 is " + m);
+        System.out.println("The movie information with the ID of 9 is: " + m);
         
         System.out.println("\nUsing a keyset, get the movies...");
         Set keys = movieMap.keySet();
